@@ -1,6 +1,7 @@
 var $car = document.querySelector('.car');
 var move = false;
 var intervalId = null;
+var left = 0;
 
 function handleKeys(event) {
   console.log(event.code);
@@ -9,7 +10,7 @@ function handleKeys(event) {
   }
 
   if (event.code === 'Space') {
-    moveCar(event.code);
+    handleMove(event.code);
   }
 }
 
@@ -28,17 +29,26 @@ function handleDirection(eventcode) {
   } else if (direction === 'ArrowLeft') {
     $car.className = 'car turn-left';
   }
+  return direction;
 }
 
-function moveCar(eventcode) {
+function handleMove(eventcode) {
   if (move === false) {
+    intervalId = setInterval(moveCar, 16);
     move = true;
     console.log('moving');
   } else if (move === true) {
+    clearInterval(intervalId);
     move = false;
     console.log('stopped');
   }
 }
 
+function moveCar() {
+  console.log('hello?');
+  left += 10;
+  console.log(left);
+  $car.style.left = left.toString() + 'px';
+}
+
 document.addEventListener('keydown', handleKeys);
-// intervalId = setInterval(moveCar, 16);

@@ -42,6 +42,6 @@ img {
 }
 
 .move-right {
-  right: 0;
-  transition: right 0.5s;
+  left: 0;
+  transition: right 0.25s;
 }
