@@ -1,7 +1,6 @@
 var $car = document.querySelector('.car');
 
 function handleArrowKeys(event) {
-  console.log(event.code);
   if (event.code.slice(0, 5) !== 'Arrow') {
     return;
   }
