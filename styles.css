@@ -10,3 +10,19 @@ img {
   position: absolute;
   width: 200px;
 }
+
+.turn-down {
+  transform: rotate(90deg);
+}
+
+.turn-left {
+  transform: rotate(180deg);
+}
+
+.turn-up {
+  transform: rotate(-90deg);
+}
+
+.turn-right {
+  transform: 0;
+}
