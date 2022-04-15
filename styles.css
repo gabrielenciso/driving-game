@@ -1,0 +1,12 @@
+.green-background {
+  background-color: rgb(41, 141, 38);
+}
+
+.position-relative {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  width: 200px;
+}
