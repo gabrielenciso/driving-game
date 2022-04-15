@@ -40,3 +40,8 @@ img {
   transform: rotate(-180deg);
   transition: transform 0.25s;
 }
+
+.move-right {
+  right: 0;
+  transition: right 0.5s;
+}
