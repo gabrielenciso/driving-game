@@ -4,7 +4,6 @@ var intervalId = null;
 var left = 0;
 
 function handleKeys(event) {
-  console.log(event.code);
   if (event.code.slice(0, 5) === 'Arrow') {
     handleDirection(event.code);
   }
@@ -45,9 +44,8 @@ function handleMove(eventcode) {
 }
 
 function moveCar() {
-  console.log('hello?');
   left += 10;
-  console.log(left);
+  console.log('left prop value: ', left);
   $car.style.left = left.toString() + 'px';
 }
 
